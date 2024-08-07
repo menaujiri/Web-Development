@@ -4,8 +4,18 @@ var numberOfDrums = document.querySelectorAll(".drum").length;
 for (i = 0; i<numberOfDrums; i++) {
     
     document.querySelectorAll(".drum")[i].addEventListener("click", function (){
-       
         var buttonInnerHTML = this.innerHTML;
+
+        playSound(buttonInnerHTML);
+    });
+};
+
+document.addEventListener("keydown", function(event) {
+    playSound(event.key);
+})
+
+function playSound(key) {
+    
         switch (buttonInnerHTML) {
         case "w":
             var tom4 = new Audio('sounds/tom-4.mp3');
@@ -41,12 +51,9 @@ for (i = 0; i<numberOfDrums; i++) {
             var crash = new Audio('sounds/crash.mp3');
             crash.play();
             break;
-        
 
         default: console.log(buttonInnerHTML)
             break;
-       }
-    })
+        }
+
 }
-
-
