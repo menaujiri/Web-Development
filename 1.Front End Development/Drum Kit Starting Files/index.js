@@ -16,7 +16,7 @@ document.addEventListener("keydown", function(event) {
 
 function playSound(key) {
     
-        switch (buttonInnerHTML) {
+        switch (key) {
         case "w":
             var tom4 = new Audio('sounds/tom-4.mp3');
             tom4.play();
