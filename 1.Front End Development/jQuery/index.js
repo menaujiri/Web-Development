@@ -1,3 +1,5 @@
-$(document).ready(function() {
-    $("h1").css("color", "red");
-});
+// 
+
+$("h1").keypress(function(event) {
+    $("h1").text(event.key)
+})
