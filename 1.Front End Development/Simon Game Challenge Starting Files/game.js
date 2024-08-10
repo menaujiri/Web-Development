@@ -23,3 +23,6 @@ function playSound(name) {
     audio.play();
 }
 
+function animatePress(currentColour) {
+
+}
