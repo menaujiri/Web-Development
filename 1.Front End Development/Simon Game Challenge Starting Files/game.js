@@ -2,6 +2,10 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = []
 
+$(document).keypress(function () {
+    if(is)
+})
+
 $(".btn" ).click(function() {
     var userChosenColour = $(this).attr("id")
     userClickedPattern.push(userChosenColour)
@@ -24,5 +28,11 @@ function playSound(name) {
 }
 
 function animatePress(currentColour) {
+    $("#" + currentColour).addClass("pressed");
+    
+    setTimeout(function() {
+        $("#" + currentColour).removeClass("pressed", 100)
+      }, 100);
 
 }
+
