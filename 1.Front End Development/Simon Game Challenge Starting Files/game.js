@@ -5,8 +5,11 @@ function nextSequence() {
     var randomNumber = Math.floor(Math.random() * 4);
     var randomChosenNumber = buttonColours[randomNumber];
     gamePattern.push(randomChosenNumber);
-    $("#" + randomChosenNumber).
+    $("#" + randomChosenNumber).fadeIn(100).fadeOut(100).fadeIn(100);
+    var audio = new Audio('audio_file.mp3');
+    audio.play();
+
 
 }
 
-$("#randomChosenNumber")
+nextSequence();
