@@ -6,6 +6,15 @@
     But when the user first goes on the website and there is no adjective and noun, 
     Show the default h1 below -->
 
+    <% if (local.adjective && local.noun ) { %> 
+      
+      <% } else { %> 
+      <p>No items to display</p>
+      <% } %> 
+      <p>
+        <%- htmlContent %>
+      </p>
+
 <form action="/submit" method="POST">
   <input type="submit" value="Generate Name">
 </form>
