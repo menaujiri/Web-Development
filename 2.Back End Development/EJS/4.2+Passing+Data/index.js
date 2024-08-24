@@ -10,7 +10,10 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-app.post("/submit", (req, res) => {});
+app.post("/submit", (req, res) => {
+  const numLetters = req.body["fName"].lenght + req.body["lName"].lenght
+  console.log(numLetters);
+});
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
