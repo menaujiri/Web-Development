@@ -9,25 +9,30 @@
 
 <body>
   <h1>
-    <%- <h1> EJS Tags </h1> %>
+    <%= title %>
   </h1>
   <p>Current second:
     <%= seconds %>
   </p>
-  if (seconds % 2===0) {
+  <% if (seconds % 2===0) { %> 
   <ul>
     <!-- List goes here if current second is even. -->
+     <% items.forEach((fruit)) => { %>
+      <li>
+        <%= fruit %>
+      </li>
+     <% } %>
     <!-- Otherwise it should display the following: -->
     <!-- <p>No items to display</p> -->
   </ul>
-  } else {
+  <% } else { %> 
   <p>No items to display</p>
-  }
+  <% } %> 
   <p>
-    <%- This is some em text %>
+    <%- htmlContent %>
   </p>
 
-  <%- include  %>
+  <%- include ("footer.ejs") %>
 </body>
 
 </html>
