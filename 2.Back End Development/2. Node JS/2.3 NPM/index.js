@@ -1,7 +1,7 @@
-var generateName = require('sillyname');
+// var generateName = require("sillyname");
 
-import xxx 
+import generateName from "sillyname"
 var sillyName = generateName();
 
 
-console.log('My name is ${sillyName}. ');
+console.log(`My name is ${sillyName}.`);
