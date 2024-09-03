@@ -1,2 +1,1 @@
-Hello from NodeJS!
-My name is Mena
+Hello from nodeJS. Today is great
