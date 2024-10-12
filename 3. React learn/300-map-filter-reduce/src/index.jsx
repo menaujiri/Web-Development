@@ -31,14 +31,14 @@ var numbers = [3, 56, 2, 48, 5];
 //     return accumulator + currentNumber
 // })
 
-// console.log(newNuymber)
+// // console.log(newNuymber)
 
-var numbers = [3, 56, 2, 48, 5];
-//Find - find the first item that matches from an array.
-const newNumber = numbers.findIndex(function (num) {
-    return num > 10;
-})
- console.log(newNumber)
+// var numbers = [3, 56, 2, 48, 5];
+// //Find - find the first item that matches from an array.
+// const newNumber = numbers.findIndex(function (num) {
+//     return num > 10;
+// })
+//  console.log(newNumber)
 
 //FindIndex - find the index of the first item that matches.
 
@@ -47,3 +47,11 @@ const newNumber = numbers.findIndex(function (num) {
 // to install the node modules and
 // npm run dev
 // to launch your react project in your browser
+
+import emojipedia from "./emojipedia";
+
+const newEmojipedia = emojipedia.map(function (emojiEntry) {
+   return emojiEntry.meaning.substring(0, 100)
+})
+
+console.log (emojipedia);
