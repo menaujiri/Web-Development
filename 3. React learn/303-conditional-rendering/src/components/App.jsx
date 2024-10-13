@@ -1,14 +1,20 @@
 import React from "react";
+import Login from "./Login"
+
+var userLogin = True
+
+function conditionalLogin() {
+  if (userLogin) {
+    return <h1>Hello</h1>
+  } else {
+    <Login />;
+  }
+}
 
 function App() {
   return (
     <div className="container">
-      <h1>Hello</h1>
-      <form className="form">
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
-        <button type="submit">Login</button>
-      </form>
+      {conditionalLogin()}
     </div>
   );
 }
